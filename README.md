@@ -8,8 +8,9 @@ this performs document scanning by detecting the contours of a paper in an image
 
    - Install the required libraries using pip:
      ```
-     pip install opencv-python imutils scikit-image
+     pip install -r requirements.txt
      ```
+     
 
 2. **Running the Script**
 
@@ -34,7 +35,9 @@ this performs document scanning by detecting the contours of a paper in an image
    - The final scanned document will be displayed along with the original image for comparison.
 
 
-## Notes
+[//]: # (## Note)
 
-- Ensure that the image you provide has clear and well-defined document edges for accurate scanning.
-- Experiment with different images and adjust the thresholding parameters if needed for optimal results.
+[//]: # ()
+[//]: # (- Ensure that the image you provide has clear and well-defined document edges for accurate scanning.)
+
+[//]: # (- Experiment with different images and adjust the thresholding parameters if needed for optimal results.)
