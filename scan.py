@@ -34,16 +34,16 @@ for c in cnts:
     approx = cv2.approxPolyDP(c, 0.02 * peri, True)
 
     if len(approx) == 4:
-        screenCnt = approx
+        screen_cnt = approx
         break
 
 print("Finding contours of paper")
-cv2.drawContours(image, [screenCnt], -1, (0, 255, 0), 2)
+cv2.drawContours(image, [screen_cnt], -1, (0, 255, 0), 2)
 cv2.imshow("Outline", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-warped = four_point_transform(orig, screenCnt.reshape(4, 2) * ratio)
+warped = four_point_transform(orig, screen_cnt.reshape(4, 2) * ratio)
 warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
 T = threshold_local(warped, 11, offset = 10, method = "gaussian")
 warped = (warped > T).astype("uint8") * 255
